@@ -1,0 +1,583 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+/*字型*/
+body {
+  font-family: "Noto Sans Tc", sans-serif;
+  line-height: 1.5;
+}
+
+.fontEng {
+  font-family: roboto;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #650300;
+  text-align: center;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #650300;
+}
+
+/*間距*/
+.navPr {
+  padding-right: 64px;
+}
+
+.mb {
+  margin-bottom: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-3 {
+  margin-bottom: 24px;
+}
+
+.mb-4 {
+  margin-bottom: 32px;
+}
+
+.mb-6 {
+  margin-bottom: 48px;
+}
+
+.pr-3 {
+  padding-right: 24px;
+}
+
+.pr-4 {
+  padding-right: 32px;
+}
+
+.pr-6 {
+  padding-right: 48px;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+h1 a {
+  width: 80px;
+  height: 49px;
+  background-image: url(/image/logoGlass.png);
+  background-repeat: no-repeat;
+  text-indent: 101%; /*首行縮排*/
+  overflow: hidden; /*自動隱藏超出的文字或圖片*/
+  white-space: nowrap; /*希望元素在第一排上面，沒有斷行*/
+}
+
+.header {
+  padding: 12px 0;
+  background-color: #AA0601;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+}
+.header .navList {
+  display: flex;
+  align-items: center;
+}
+.header .navList a {
+  color: #FFFFFF;
+  font-size: 20px;
+}
+.header .navList a:hover {
+  color: gray;
+}
+
+/* navRWD*/
+@media (max-width: 992px) {
+  .header {
+    padding: 12px 36px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    padding: 0;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav h1 {
+    padding: 16px 0;
+  }
+  .navList {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .navList li {
+    width: 50%;
+    border: 1px solid #FFFFFF;
+    padding: 12px 0;
+  }
+  .navList a {
+    text-align: center;
+    font-size: 16px;
+    padding-right: 0px;
+  }
+}
+.banner {
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+  background-size: cover;
+  background-position: center center;
+  color: #650300;
+}
+.banner .bannerContent {
+  padding: 296px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.banner .bannerContent p {
+  font-size: 36px;
+}
+.banner .bannerContent a {
+  width: 104px;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 6px 12px;
+  background-color: #AA0601;
+}
+
+/*bannerRWD*/
+@media (max-width: 992px) {
+  .banner {
+    padding: 0 36px;
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    padding: 0 14px;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+  }
+  .banner .bannerContent h2 {
+    font-size: 24px;
+  }
+  .banner .bannerContent p {
+    font-size: 16px;
+  }
+}
+.advantage {
+  background-color: #FBF2F2;
+  padding: 80px 0;
+}
+.advantage img {
+  width: 84px;
+  height: 84px;
+}
+.advantage .advantageList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.advantage .advantageList li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  padding-right: 24px;
+}
+.advantage .advantageList .noPadding {
+  padding-right: 0;
+}
+
+/*advantage RWD*/
+@media (max-width: 992px) {
+  .advantage {
+    padding: 80px 36px;
+  }
+  .advantage .advantageList {
+    margin-right: 0;
+  }
+  .advantage .advantageList li {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .advantage {
+    padding: 40px 14px;
+  }
+  .advantage h3 {
+    font-size: 24px;
+  }
+  .advantage .advantageList li {
+    padding-right: 0;
+    width: 100%;
+  }
+}
+.category {
+  padding: 80px 0;
+}
+.category .categoryList {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*category RWD*/
+@media (max-width: 992px) {
+  .category {
+    padding: 80px 36px;
+  }
+  .category .categoryList {
+    flex-direction: column;
+    align-items: center;
+  }
+  .category .categoryList li {
+    padding-right: 0;
+    padding-bottom: 24px;
+    width: 50%;
+  }
+  .category .categoryList .pb0 {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .category {
+    padding: 40px 14px;
+  }
+  .category > h3 {
+    font-size: 24px;
+  }
+  .category .categoryList li {
+    width: 100%;
+  }
+}
+.cobranding {
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+}
+.cobranding .textWhite {
+  color: #FFFFFF;
+}
+.cobranding a {
+  background-color: #FFFFFF;
+}
+.cobranding a h3:hover {
+  transform: rotate(15deg);
+}
+.cobranding .brandList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cobranding .brandList li {
+  width: 50%;
+  padding-bottom: 24px;
+}
+
+/* cobranding RWD*/
+@media (max-width: 992px) {
+  .cobranding {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true);
+    padding: 80px 36px;
+  }
+  .cobranding .brandList li {
+    width: 100%;
+  }
+  .cobranding .brandList .pb0 {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .cobranding {
+    padding: 40px 14px;
+  }
+  .cobranding .text-s {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+.recommend {
+  padding: 80px 0;
+}
+.recommend .recommendCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.recommend .recommendCard span {
+  font-weight: 500;
+}
+.recommend .recommendCard li {
+  width: 24%;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+}
+.recommend .content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recommend .date p {
+  font-size: 14px;
+}
+
+/* recommend RWD */
+@media (max-width: 992px) {
+  .recommend {
+    padding: 80px 36px 56px 36px;
+  }
+  .recommend .recommendCard li {
+    width: 48%;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .recommend {
+    padding: 40px 14px 24px 14px;
+  }
+  .recommend h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .recommend .recommendCard li {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+.contactForm {
+  background-color: #FBF2F2;
+  padding: 80px 0;
+}
+.contactForm .form {
+  width: 50%;
+  margin: 0 auto;
+}
+.contactForm .form input {
+  width: 100%;
+  padding: 6px 12px;
+}
+.contactForm .form .textarea {
+  height: 136px;
+}
+.contactForm .checkbox {
+  display: flex;
+}
+.contactForm .checkbox .check {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+.contactForm .sendForm {
+  width: 66.66%;
+  margin: 0 auto;
+  color: #FFFFFF;
+  background-color: #AA0601;
+  padding: 16px 0;
+  text-align: center;
+}
+
+/* form RWD */
+@media (max-width: 992px) {
+  .contactForm {
+    padding: 80px 36px;
+  }
+  .contactForm h3 {
+    margin-bottom: 24px;
+  }
+  .contactForm .form {
+    width: 83.33%;
+  }
+}
+@media (max-width: 767px) {
+  .contactForm {
+    padding: 40px 14px;
+  }
+  .contactForm h3 {
+    font-size: 24px;
+  }
+  .contactForm .form {
+    width: 100%;
+  }
+  .contactForm .sendForm {
+    width: 100%;
+  }
+  .contactForm .checkbox {
+    margin-bottom: 24px;
+  }
+}
+.footer {
+  padding: 48px 0 32px 0;
+  background-color: #AA0601;
+}
+.footer a {
+  color: #FFFFFF;
+}
+.footer img {
+  width: 48px;
+  height: 48px;
+}
+.footer .footerBar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #FFFFFF;
+}
+.footer .barList {
+  display: flex;
+  margin-bottom: 36px;
+}
+.footer .barList li {
+  padding-right: 48px;
+}
+.footer .mediaList {
+  display: flex;
+}
+.footer .contactContent li {
+  display: flex;
+  font-size: 36px;
+  align-items: center;
+}
+.footer .material-symbols-outlined {
+  font-size: 36px;
+  color: #FFFFFF;
+  margin-right: 20px;
+}
+.footer .copyright {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .copyright ul {
+  display: flex;
+}
+.footer .copyright a {
+  font-size: 14px;
+}
+
+/* footer RWD */
+@media (max-width: 992px) {
+  .footer {
+    padding: 48px 36px 40px 36px;
+  }
+  .footer .mediaList li {
+    padding-right: 16px;
+  }
+  .footer .mediaList .logoLine {
+    padding-right: 0;
+  }
+  .footer .barList .pr0 {
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    padding: 24px 14px 16px 14px;
+  }
+  .footer img {
+    width: 24px;
+    height: 24px;
+  }
+  .footer .barList {
+    display: none;
+  }
+  .footer .contactContent {
+    margin-bottom: 16px;
+  }
+  .footer .contactContent li {
+    font-size: 16px;
+  }
+  .footer .material-symbols-outlined {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .footer .copyright {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer .copyright p {
+    margin-bottom: 8px;
+  }
+  .footer .copyright ul {
+    flex-direction: column;
+  }
+  .footer .copyright li {
+    padding-bottom: 8px;
+  }
+}/*# sourceMappingURL=all.css.map */
